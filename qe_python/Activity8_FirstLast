@@ -1,0 +1,6 @@
+list = list(map(int, input("Enter numbers: ").split()))
+len=len(list)
+if(list[0]==list[len-1]):
+    print("True")
+else:
+    print("False")

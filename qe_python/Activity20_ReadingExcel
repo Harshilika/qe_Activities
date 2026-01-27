@@ -1,0 +1,5 @@
+import pandas as pd
+excelFile=pd.read_excel("Activity19.xlsx")
+print("Size:",excelFile.shape)
+print(excelFile["Email"])
+print(excelFile.sort_values(by="FirstName"))
