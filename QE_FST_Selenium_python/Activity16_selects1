@@ -1,0 +1,15 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import Select
+with webdriver.Firefox() as driver:
+    driver.get("https://training-support.net/webelements/selects")
+    print(driver.title)
+    dropdown=driver.find_element(By.TAG_NAME,"select")
+    select = Select(dropdown)
+    select.select_by_visible_text("Two")
+    select.select_by_index(3)
+    select.select_by_value("four")
+    options=select.options
+    for val in options:
+        print(val.text)
+    

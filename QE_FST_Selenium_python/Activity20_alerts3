@@ -1,0 +1,19 @@
+from selenium import webdriver
+import time
+from selenium.webdriver.common.by import By
+with webdriver.Firefox() as driver:
+    driver.get("https://training-support.net/webelements/alerts")
+    print(driver.title)
+    promptt=driver.find_element(By.ID,"prompt")
+    promptt.click()
+    alert = driver.switch_to.alert
+    time.sleep(1)
+    print(alert.text)
+    alert.send_keys("Awesome!")
+    alert.accept()
+    res=driver.find_element(By.ID,"result")
+    print(res.text)
+    
+
+
+    
